@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="Imagenes/IconoDavivienda.ico" type="image/ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davivienda - Certificado de Depósito de Ahorro a Término (CDAT)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="cdat.css">
+</head>
+<body id="principio">
+
+    <nav class="navbar">
+        <a href="index.html" class="back-btn">Inicio</a>
+        <div class="logo">DAVIVIENDA</div>
+    </nav>
+
+    <header class="cdat-hero">
+        <div class="hero-text">
+            <h1>Certificado de Depósito de Ahorro a Término - CDAT</h1>
+            <p class="hero-description">Con el Certificado de Depósito de Ahorro a Término podrá hacer un ahorro seguro, rentable, elegir el plazo y la tasa que más le convenga.</p>
+        </div>
+    </header>
+
+    <section class="section-container">
+        <h2 class="section-title">Beneficios</h2>
+        <div class="cards-grid three-cols">
+            <div class="info-card border-red">
+                <div class="icon">🗓️</div>
+                <h3>Intereses periódicos</h3>
+                <p>Elija si recibir los intereses de su inversión mensual, trimestral, semestral o anual.</p>
+            </div>
+            <div class="info-card border-red">
+                <div class="icon">💻</div>
+                <h3>Administre su ahorro</h3>
+                <p>Reinvierta su CDAT sin complicaciones a través de www.davivienda.com.</p>
+            </div>
+            <div class="info-card border-red">
+                <div class="icon">🔄</div>
+                <h3>Flexibilidad de pago</h3>
+                <p>Reciba el dinero de su inversión e intereses en su cuenta en caso de cancelar su CDAT.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container dark-section">
+        <h2 class="section-title text-white no-border center-text">Tabla de tasas y tarifas</h2>
+        
+        <div class="table-wrapper">
+            <table class="rates-table">
+                <thead>
+                    <tr>
+                        <th>Tasa Efectiva Anual</th>
+                        <th>Plazo de Inversión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4,35 % E.A.</td>
+                        <td>Plazo de 90 días</td>
+                    </tr>
+                    <tr>
+                        <td>4,85 % E.A.</td>
+                        <td>Plazo de 180 días</td>
+                    </tr>
+                    <tr>
+                        <td>5,15 % E.A.</td>
+                        <td>Plazo de 360 días</td>
+                    </tr>
+                    <tr>
+                        <td>5,50 % E.A.</td>
+                        <td>Plazo de 540 días</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-notes">
+            <p>Las tasas presentadas no superan los 50 millones de pesos. Conozca otros montos y plazos disponibles en <a href="https://www.davivienda.com/documents/d/guest/tasas-tarifas-davivienda" class="rates-link">nuestras tasas y tarifas</a>.</p>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title text-center no-border">¿Cómo reinvertir o cancelar su CDAT?</h2>
+        
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'reinversion')">Reinversión</button>
+                <button class="tab-btn" onclick="openTab(event, 'cancelacion')">Cancelación</button>
+            </div>
+            
+            <div class="tabs-content">
+                
+                <div id="reinversion" class="tab-pane active">
+                    <p class="tab-intro">Para reinvertir su CDAT, siga estos pasos:</p>
+                    <ol class="custom-numbered-list">
+                        <li>Inicie sesión en www.davivienda.com.</li>
+                        <li>Seleccione el botón de <strong>"Inversiones"</strong> y elija el CDAT que quiere reinvertir.</li>
+                        <li>Ingrese el valor a reinvertir y el plazo de su inversión.</li>
+                        <li>Elija la periodicidad de los rendimientos y siga las instrucciones.</li>
+                    </ol>
+                </div>
+                
+                <div id="cancelacion" class="tab-pane">
+                    <p class="tab-intro">Para cancelar su CDAT, siga estos pasos:</p>
+                    <ol class="custom-numbered-list">
+                        <li>Inicie sesión en www.davivienda.com.</li>
+                        <li>Seleccione el botón de <strong>"Inversiones"</strong> y elija el CDAT que quiere cancelar.</li>
+                        <li>Elija la opción <strong>"Cancelar CDAT"</strong> y siga las instrucciones.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+            // 1. Ocultamos todos los contenidos
+            var tabPanes = document.getElementsByClassName("tab-pane");
+            for (var i = 0; i < tabPanes.length; i++) {
+                tabPanes[i].classList.remove("active");
+            }
+            
+            // 2. Le quitamos la línea roja a todos los botones
+            var tabBtns = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+            
+            // 3. Mostramos el contenido correcto y le ponemos la línea roja al botón que se tocó
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+    <div class="sticky-cta">
+        <a href="https://www.davivienda.com/personas/inversiones/cdat#tab-btn-kgza-2" class="btn-primary" target="_blank">Abrir mi CDAT en la página oficial de Davivienda</a>
+    </div>
+
+    <footer>
+        <p>© 2026 Banco Davivienda S.A. Todos los derechos reservados.</p>
+        <p>Vigilado Superintendencia Financiera de Colombia</p>
+    </footer>
+    
+</body>
+</html>
